@@ -18,6 +18,7 @@ public class AppInfo {
     public static String    APP_TITLE           =   "My Phone";
     public static String    APP_TEXT            =   "This is text from My Phone";
     public static int       APP_ICON            =   R.drawable.my_phone;
+    public static String    ACTION_PHONE_SEND_NOTI    =     "ACTION_PHONE_SEND_NOTI";
     private WindowManager mWindowManager = null;
     private Context mApplicationContext = null;
     private Resources mAppResource = null;

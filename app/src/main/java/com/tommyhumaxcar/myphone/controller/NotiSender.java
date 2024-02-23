@@ -79,17 +79,23 @@ public class NotiSender {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 Log.d(TAG, buttonView.getText().toString() + " isCheck = " + isChecked);
                 if (isChecked) {
+                    Log.d(TAG, "check!!!");
                     notiCheckBox.add(buttonView.getText().toString());
                 } else {
+                    Log.d(TAG, "uncheck!!!");
                     notiCheckBox.remove(buttonView.getText().toString());
                 }
+                Log.d(TAG, "get notiCheckBox" + notiCheckBox.toString());
             }
         };
     }
 
     public void onReceiveBroadcast (String act) {
-        if (notiCheckBox.toString() == act) {
+        Log.d(TAG, "onReceiveBroadcast: act: " + act + " notiCheckBox: " + notiCheckBox.toString());
+        if (notiCheckBox.toString().equals("[ACTION_PHONE_SEND_NOTI]")) {
             noti();
+        } else {
+            Log.d(TAG, "do nothing!!!");
         }
     }
 }

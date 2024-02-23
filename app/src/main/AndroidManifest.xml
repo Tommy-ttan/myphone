@@ -23,10 +23,10 @@
         </activity>
         <receiver
             android:name=".controller.BroadcastReceiverHandler"
-            android:exported="true">
+            android:enabled="true"
+            android:exported="false">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="ACTION_PHONE_SEND_NOTI" />
             </intent-filter>
         </receiver>
     </application>

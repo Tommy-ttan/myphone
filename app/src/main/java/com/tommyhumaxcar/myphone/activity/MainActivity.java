@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         addTextView("Broadcast receiver", UiStyle.STYLE_2, UiStyle.LAYOUT_STYLE_2);
         // Test Broadcast on-off
         addTextView("Use command below to send Broadcast: " +
-                "adb shell \"am broadcast -a ACTION_PHONE_SEND_NOTI --es sms_body 'adb' -n com.example.testapptemplate/receiver.AppReceiver\"",
+                "adb shell \"am broadcast -a ACTION_PHONE_SEND_NOTI -n com.tommyhumaxcar.myphone/.controller.BroadcastReceiverHandler --es extra_data \"Hello from adb!\\",
                 UiStyle.STYLE_3, UiStyle.LAYOUT_STYLE_3);
         addTextView("Register Broadcast receiver",
                 UiStyle.STYLE_3, UiStyle.LAYOUT_STYLE_1);

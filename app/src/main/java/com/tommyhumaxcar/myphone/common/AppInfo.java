@@ -9,8 +9,8 @@ import android.view.WindowManager;
 import com.tommyhumaxcar.myphone.R;
 
 public class AppInfo {
-    public static String    OWNER               =   "TOMMY";
-    private static String   TAG                 =   "AppInfo";
+    public static String    APP                 =   "MY PHONE - ";
+    private static String   TAG                 =   APP + "AppInfo";
     public static String    CHANNEL_ID          =   "TOMMY_CHANNEL_ID";
     public static String    CHANNEL_NAME        =   "TOMMY_CHANNEL_NAME";
     public static int       CHANNEL_IMPORTANT   =   NotificationManager.IMPORTANCE_DEFAULT;

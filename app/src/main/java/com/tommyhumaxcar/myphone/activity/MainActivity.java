@@ -19,11 +19,11 @@ import com.tommyhumaxcar.myphone.R;
 import com.tommyhumaxcar.myphone.common.AppInfo;
 import com.tommyhumaxcar.myphone.common.UiStyle;
 import com.tommyhumaxcar.myphone.controller.NotiSender;
+import com.tommyhumaxcar.myphone.controller.SetRank;
 
 public class MainActivity extends AppCompatActivity {
-    private final String TAG = "MainActivity";
+    private final String TAG = AppInfo.APP + "MainActivity";
     LinearLayout mMainLayout = null;
-    int iconId = R.drawable.my_phone;
     Context mContext = this;
     View.OnClickListener defaultButtonClicked = new View.OnClickListener() {
         @Override
@@ -51,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void generateUI() {
+        //Header
+        addTextView("This is My Phone", UiStyle.STYLE_2, UiStyle.LAYOUT_STYLE_3);
+
         // Header
         addTextView("Device Information", UiStyle.STYLE_2, UiStyle.LAYOUT_STYLE_2);
         // Device Information
@@ -63,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
         addTextView("Test button", UiStyle.STYLE_2, UiStyle.LAYOUT_STYLE_2);
         // Test button
         addButton("Send Noti", NotiSender.getInstance().onButtonClick(),
+                UiStyle.STYLE_1, UiStyle.LAYOUT_STYLE_1);
+        addButton("Set Rank", SetRank.getInstance().onButtonClick(),
                 UiStyle.STYLE_1, UiStyle.LAYOUT_STYLE_1);
 
         // Header

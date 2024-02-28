@@ -5,8 +5,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
+import com.tommyhumaxcar.myphone.common.AppInfo;
+
 public class BroadcastReceiverHandler extends BroadcastReceiver {
-    private static String TAG = "BroadcastReceiverHandler";
+    private static String TAG = AppInfo.APP + "BroadcastReceiverHandler";
     @Override
     public void onReceive(Context context, Intent intent) {
         String act = intent.getAction();

@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+<!--    <permission-->
+<!--        android:name="com.humaxdigital.automotive.systemui.permission.SET_RANK_PERMISSION"-->
+<!--        android:protectionLevel="normal">-->
+<!--    </permission>-->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <application
         android:allowBackup="true"

@@ -19,9 +19,8 @@ import com.tommyhumaxcar.myphone.common.AppInfo;
 import java.util.HashSet;
 
 public class NotiSender {
-    private final String TAG = "NotiSender";
+    private final String TAG = AppInfo.APP + "NotiSender";
     private HashSet<String> notiCheckBox = new HashSet<>();
-//    HashSet<String> hashSet = new HashSet<>();
     private static NotiSender mInstance = null;
     private NotiSender() {};
     public static NotiSender getInstance() {

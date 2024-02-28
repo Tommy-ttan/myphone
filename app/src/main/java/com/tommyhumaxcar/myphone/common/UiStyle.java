@@ -13,7 +13,6 @@ import android.widget.TextView;
 import com.tommyhumaxcar.myphone.R;
 
 public class UiStyle {
-    //    private final String TAG = AppInfo.OWNER+"LayoutStyle";
     private static UiStyle mInstance = null;
 
     public static final int STYLE_0 = 0; // Base as default

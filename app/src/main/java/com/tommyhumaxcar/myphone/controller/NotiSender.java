@@ -61,7 +61,18 @@ public class NotiSender {
         buidNoti();
     }
 
-    public View.OnClickListener onButtonClick(){
+    public View.OnClickListener onButtonNormalNotiClick(){
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button btn = (Button)v;
+                Log.d(TAG, "ButtonClick: " + btn.getText().toString());
+                noti();
+            }
+        };
+    }
+
+    public View.OnClickListener onButtonUrgentNotiClick(){
         return new View.OnClickListener() {
             @Override
             public void onClick(View v) {

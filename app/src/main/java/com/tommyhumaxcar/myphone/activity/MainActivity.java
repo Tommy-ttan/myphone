@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.RemoteException;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -20,6 +21,8 @@ import com.tommyhumaxcar.myphone.common.AppInfo;
 import com.tommyhumaxcar.myphone.common.UiStyle;
 import com.tommyhumaxcar.myphone.controller.NotiSender;
 import com.tommyhumaxcar.myphone.controller.SetRank;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private final String TAG = AppInfo.APP + "MainActivity";
@@ -65,9 +68,13 @@ public class MainActivity extends AppCompatActivity {
         // Header
         addTextView("Test button", UiStyle.STYLE_2, UiStyle.LAYOUT_STYLE_2);
         // Test button
-        addButton("Send Noti", NotiSender.getInstance().onButtonClick(),
+        addButton("Normal Noti", NotiSender.getInstance().onButtonNormalNotiClick(),
                 UiStyle.STYLE_1, UiStyle.LAYOUT_STYLE_1);
-        addButton("Set Rank", SetRank.getInstance().onButtonClick(),
+//        addButton("Urgent Noti", NotiSender.getInstance().onButtonUrgentNotiClick(),
+//                UiStyle.STYLE_1, UiStyle.LAYOUT_STYLE_1);
+        addButton("Lock AA", SetRank.getInstance().onButtonLockClick(),
+                UiStyle.STYLE_1, UiStyle.LAYOUT_STYLE_1);
+        addButton("UnLock itself", SetRank.getInstance().onButtonUnLockClick(),
                 UiStyle.STYLE_1, UiStyle.LAYOUT_STYLE_1);
 
         // Header
